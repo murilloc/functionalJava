@@ -37,7 +37,7 @@ public class AverageSalaryPractice {
 
 
         // Mapa com a média de salários por emprego
-        Map<String, Float> averageSlrariesMap = employees
+        Map<String, Float> averageSalariesMap = employees
                 .stream()
                 .collect(Collectors.groupingBy(
                         (employee -> employee.jobTitle)
@@ -52,7 +52,7 @@ public class AverageSalaryPractice {
                                 .reduce(0f, Float::sum) / entry.getValue().size()
                 ));
 
-        System.out.println(averageSlrariesMap);
+        System.out.println(averageSalariesMap);
 
 
     }
